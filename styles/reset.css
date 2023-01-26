@@ -1,0 +1,44 @@
+html, body, div, p,
+a, img, i,form, label, 
+footer, header, nav, 
+output, section, button, ul, li,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+		box-sizing: border-box;
+}
+footer, header, nav, section {
+    display: block;
+}
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    line-height: 1;
+    max-height: fit-content;
+    font-family: "Nanum Gothic";
+}
+ol, ul {
+	list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: "Nanum Gothic";
+    src: url("/fonts/NanumGothic-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Archivo Black";
+    src: url('../fonts/ArchivoBlack-Regular.ttf');
+}

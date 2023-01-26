@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/navfooter.css">
+    <link rel="stylesheet" href="./styles/fontello.css">
+</head>
+
+<body>
+
+
+    <!-- https://static.nike.com/a/images/w_1920,c_limit,f_auto,q_auto/6c4d4028-71d9-49c1-a303-4003b55a62d9/image.jpg -->
+
+
+    <header>
+        <div class="search-wrapper">
+            <label for="search" class="search-label">Trykk enter eller søk-knappen</label>
+            <form action="">
+                <input id="search" class="btns-wrapper__item input-search" type="text">
+                <button class="submit"> <i class="icon-search"></i> </button>
+            </form>
+            <div class="prod-links-list">
+
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <div class="col-logo">
+                    <a href="./main.html" class="logo"> SkoHubben </a>
+                </div>
+                <p id="sneakers" class="sneakers">Sneakers <i class="icon-right-open-big"></i></p>
+                <div class="col nav">
+                    <a class="nav-item" href="./airjordan.html">Air Jordan</a>
+                    <a class="nav-item" href="./dunks.html">Dunks</a>
+                    <a class="nav-item" href="./blazer.html">Blazer</a>
+                    <a class="nav-item" href="./other.html">Other</a>
+                </div>
+                <div class="col-btns">
+                    <div class="btns-wrapper">
+                        <a href="./cart.html" class="btns-wrapper__item btn-cart"><i class="icon-opencart"></i></a>
+                        <button class="btns-wrapper__item btn-search"> <i class="icon-search"></i> </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="main-page">
+
+        <div class="info-block">
+            <div class="row">
+                <div class="col col-left">
+                    <p class="title">
+                        Nike Air <br>
+                        <span>Jordan 1</span>
+                    </p>
+                    <p class="text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, consequatur molestiae
+                        quasi, ex iste voluptatem vel eius voluptatum quod natus provident nostrum sunt facilis
+                        repudiandae tempore adipisci illo accusantium error labore hic. Dolorem eveniet doloremque totam
+                        quae impedit? At, nostrum?
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Air_Jordan" class="btn-know-more">
+                        Å lære mer <i class="icon-right"></i>
+                    </a>
+                </div>
+                <div class="col">
+                    <img src="./img/sneakers-jordan-1-grey.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="slider-block">
+            <p class="title">Nytt denne sesongen</p>
+
+            <div class="slider-wrapper">
+                <button class="btn-prev"><i class="icon-left-open-big"></i></button>
+                <button class="btn-next"><i class="icon-right-open-big"></i></button>
+                <div class="slider-container">
+                    <div class="slider-run">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        <div class="row">
+            <img src="./img/payment/2560px-Klarna_Logo_black.svg-800x178.png" alt="">
+            <img src="./img/payment/Mastercard-logo.svg_.png" alt="">
+            <img src="./img/payment/vipps-rgb-orange-neg-4.png" alt="">
+            <img src="./img/payment/Visa_2021.svg_.png" alt="">
+        </div>
+    </footer>
+
+
+
+    <script type="module" src="./scripts/renderProducts.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+main {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  background-color: rgb(255, 255, 255);
+}
+main .product-info {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  gap: 0 5%;
+}
+main .product-info .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+main .product-info .gallery img {
+  width: 100%;
+}
+main .product-info .info .name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0 40px 0;
+}
+main .product-info .info .desc {
+  font-size: 20px;
+}
+main .product-info .info .price {
+  font-size: 18px;
+  color: rgb(118, 118, 118);
+  margin-top: 15px;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+main .product-info .info .btn-add-in-cart {
+  width: 100%;
+  border: 2px solid black;
+  height: 50px;
+  background-color: white;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+main .product-info .info .btn-add-in-cart i {
+  font-size: 30px;
+}
+main .product-info .info .btn-add-in-cart:hover {
+  background-color: black;
+  color: white;
+}
+main .product-info .info .btn-add-in-cart:active {
+  background-color: white;
+  border: 2px solid white;
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-top: 100px;
+  }
+  main .product-info {
+    width: 94%;
+    grid-template-columns: 7fr 5fr;
+  }
+  main .product-info .gallery {
+    gap: 20px;
+  }
+  main .product-info .info .name {
+    font-size: 20px;
+  }
+  main .product-info .info .desc {
+    font-size: 16px;
+  }
+  main .product-info .info .price {
+    font-size: 18px;
+    margin: 15px 0 30px 0;
+  }
+}
+@media (max-width: 680px) {
+  body main .product-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .product-info .info {
+    margin-top: 50px;
+  }
+  body main .product-info .info .name {
+    margin: 0px 0 30px 0;
+  }
+}/*# sourceMappingURL=sneakerInfo.css.map */

@@ -1,0 +1,162 @@
+.cart {
+  display: grid;
+  grid-template-columns: 7fr 200px;
+  grid-column-gap: 8%;
+  width: 65%;
+  margin: 120px auto;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+}
+.cart .col-cart .title {
+  font-size: 30px;
+  padding: 0 0 20px 30px;
+}
+.cart .col-cart .empty-block {
+  display: block;
+  font-size: 20px;
+  margin-top: 50px;
+}
+.cart .col-cart .hide {
+  display: none;
+}
+.cart .col-cart .products-list {
+  display: grid;
+  grid-row-gap: 20px;
+}
+.cart .col-cart .products-list .product {
+  background-color: rgb(255, 255, 255);
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cart .col-cart .products-list .product .col-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cart .col-cart .products-list .product .col-left img {
+  height: 100%;
+}
+.cart .col-cart .products-list .product .col-left .text-wrapper {
+  margin: 20px 0 0 30px;
+}
+.cart .col-cart .products-list .product .col-left .text-wrapper .name {
+  margin-bottom: 15px;
+  font-size: 19px;
+  color: black;
+}
+.cart .col-cart .products-list .product .col-left .text-wrapper .shoes {
+  font-size: 16px;
+  color: grey;
+}
+.cart .col-cart .products-list .product .col-left .text-wrapper .btn-delete {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.cart .col-cart .products-list .product .col-left .text-wrapper .btn-delete .icon-trash-empty {
+  display: block;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.cart .col-cart .products-list .product .col-right .price {
+  margin-top: 20px;
+  font-size: 19px;
+  color: black;
+}
+.cart .col-summary .title {
+  font-size: 30px;
+  padding: 0 0 20px 30px;
+}
+.cart .col-summary .total {
+  margin: 17px 0 15px 0;
+  font-size: 20px;
+}
+.cart .col-summary .buy {
+  border: none;
+  background-color: black;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cart .col-summary .buy img {
+  display: block;
+  width: 100px;
+}
+
+@media (max-width: 1200px) {
+  body .cart {
+    width: 94%;
+  }
+}
+@media (max-width: 850px) {
+  body .cart {
+    padding-bottom: 50px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 80px;
+  }
+  body .cart .col-cart .title {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  body .cart .col-summary .title {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  body .cart .col-cart .products-list .product {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+  body .cart .col-cart .products-list .product .col-left img {
+    height: 140px;
+  }
+  body .cart .col-cart .products-list .product .col-left .text-wrapper {
+    margin: 10px 0 0 13px;
+  }
+  body .cart .col-cart .products-list .product .col-left .text-wrapper .name {
+    font-size: 18px;
+  }
+  body .cart .col-cart .products-list .product .col-left .text-wrapper .shoes {
+    font-size: 16px;
+  }
+  body .cart .col-cart .products-list .product .col-left .text-wrapper .btn-delete {
+    position: absolute;
+    bottom: 6px;
+    right: 0px;
+  }
+  body .cart .col-cart .products-list .product .col-left .text-wrapper .btn-delete .icon-trash-empty {
+    font-size: 30px;
+  }
+  body .cart .col-cart .products-list .product .col-right .price {
+    position: absolute;
+    bottom: 10px;
+    left: 130px;
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=cart.css.map */

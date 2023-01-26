@@ -1,0 +1,200 @@
+.cart {
+    display: grid;
+    grid-template-columns: 7fr 200px;
+    grid-column-gap: 8%;
+    width: 65%;
+    margin: 120px auto;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    .col-cart {
+        .title {
+            font-size: 30px;
+            padding: 0 0 20px 30px;
+        }
+
+        .empty-block {
+            display: block;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .products-list {
+            display: grid;
+            grid-row-gap: 20px;
+
+            .product {
+                background-color: rgb(255, 255, 255);
+                height: 150px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+
+                .col-left {
+                    display: flex;
+
+                    img {
+                        height: 100%;
+                        
+                    }
+
+                    .text-wrapper {
+                        margin: 20px 0 0 30px;
+
+                        .name {
+                            margin-bottom: 15px;
+                            font-size: 19px;
+                            color: black;
+                        }
+
+                        .shoes {
+                            font-size: 16px;
+                            color: grey;
+                        }
+
+                        .btn-delete {
+                            border: none;
+                            background-color: rgb(255, 255, 255);
+                            cursor: pointer;
+
+                            .icon-trash-empty {
+                                display: block;
+                                margin-top: 20px;
+                                font-size: 25px;
+                            }
+                        }
+
+                    }
+                }
+
+                .col-right {
+                    .price {
+                        margin-top: 20px;
+                        font-size: 19px;
+                        color: black;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .col-summary {
+        .title {
+            font-size: 30px;
+            padding: 0 0 20px 30px;
+        }
+
+        .total {
+            margin: 17px 0 15px 0;
+            font-size: 20px;
+        }
+
+        .buy {
+            border: none;
+            background-color: black;
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                display: block;
+                width: 100px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+@media(max-width: 1200px) {
+    body {
+        .cart {
+            width: 94%;
+        }
+    }
+}
+
+@media(max-width:850px) {
+    body {
+        .cart {
+            padding-bottom: 50px;
+            grid-template-columns: 1fr;
+            grid-row-gap: 80px;
+
+            .col-cart {
+                .title {
+                    padding: 0px;
+                    margin-bottom: 20px;
+
+                }
+            }
+            .col-summary {
+                .title {
+                    padding: 0px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 600px) {
+    body {
+        .cart {
+            .col-cart {
+                .products-list {
+                    .product {
+                        height: fit-content;
+                        flex-direction: column;
+                        position: relative;
+                        z-index: 1;
+                        .col-left {
+                            img {
+                                height: 140px;
+                            }
+                            .text-wrapper {
+                                margin: 10px 0 0 13px;
+                                .name {
+                                    font-size: 18px;
+                                }
+                                .shoes {
+                                    font-size: 16px;
+                                }
+                                .btn-delete {
+                                    position: absolute;
+                                    bottom: 6px;
+                                    right: 0px;
+                                    .icon-trash-empty {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                        .col-right {
+                            .price {
+                                position: absolute;
+                                bottom: 10px;
+                                left: 130px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
