@@ -146,19 +146,7 @@ const products = [
     {
         name: "Nike Air Max 90 GTX",
         desc: "Designed to keep you having fun when the rain starts, the Nike Air Max 90 GTX delivers a waterproof take on the champion running shoe that helped define the ‘90s. Sure to be a coveted edition, your tried and true gets a GORE-TEX upper so you can make a splash without getting wet.",
-        price: 13560,
-        img: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d10c3174-fd3e-4284-84d8-f70b3d8eede3/air-max-90-gtx-mens-shoes-mCrXQm.png",
-        imgPairSide: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fdd29712-0827-4aab-bde7-fee1d6253ded/air-max-90-gtx-mens-shoes-mCrXQm.png",
-        imgSole: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0df31086-ca50-465a-a609-7df39c1147f6/air-max-90-gtx-mens-shoes-mCrXQm.png",
-        imgPairAbove: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/bc34e58a-1d32-4842-bd25-af487b3efcd8/air-max-90-gtx-mens-shoes-mCrXQm.png",
-        brand: "nike",
-        showInSlider: false,
-    },
-
-    {
-        name: "Nike Air Max 90 GTX",
-        desc: "Designed to keep you having fun when the rain starts, the Nike Air Max 90 GTX delivers a waterproof take on the champion running shoe that helped define the ‘90s. Sure to be a coveted edition, your tried and true gets a GORE-TEX upper so you can make a splash without getting wet.",
-        price: 13560,
+        price: 1350,
         img: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d10c3174-fd3e-4284-84d8-f70b3d8eede3/air-max-90-gtx-mens-shoes-mCrXQm.png",
         imgPairSide: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/fdd29712-0827-4aab-bde7-fee1d6253ded/air-max-90-gtx-mens-shoes-mCrXQm.png",
         imgSole: "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/0df31086-ca50-465a-a609-7df39c1147f6/air-max-90-gtx-mens-shoes-mCrXQm.png",

@@ -36,6 +36,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
 }
 .cart .col-cart .products-list .product .col-left {
   display: -webkit-box;

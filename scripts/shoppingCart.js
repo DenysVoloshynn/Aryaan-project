@@ -9,8 +9,6 @@ localStorage.setItem("firstVisit", "")
 
 
 
-
-
 const productsList = document.querySelector(".products-list")
 const totalPrice = document.querySelector("#total-price")
 
@@ -38,57 +36,68 @@ function showEmptyBlock(e) {
 if (window.location.pathname.includes("cart")) {
     window.addEventListener("load", function renderLS(e) {
         const cart = JSON.parse(localStorage.getItem("cart"));
+        if(cart) {
+            cart.forEach(p => {
 
-        cart.forEach(p => {
-
-            const pHTML = `<a href="./sneakerinfo.html"  class="product" data-id="${p.id}">
-                             <div class="col-left">
-                                 <img src="${p.img}" alt="">
-                                 <div class="text-wrapper">
-                                    <p class="name">${p.name}</p>
-                                    <p class="shoes">Shoes</p>
-                                    <button id="delete" class="btn-delete"><i class="icon-trash-empty"></i></button>
-                                </div>
-                             </div>
-                             <div class="col-right">
-                                <p class="price">kr <span id="price">${p.price}</span> </p>
-                             </div>
-                           </a>`
-
-            productsList.insertAdjacentHTML("beforeend", pHTML)
-            totalPrice.innerText = +totalPrice.innerText + p.price
-
-        });
+                const pHTML = `<div  class="product" data-id="${p.id}">
+                                 <div class="col-left">
+                                     <img src="${p.img}" alt="">
+                                     <div class="text-wrapper">
+                                        <p class="name">${p.name}</p>
+                                        <p class="shoes">Shoes</p>
+                                        <button id="delete" class="btn-delete"><i class="icon-trash-empty"></i></button>
+                                    </div>
+                                 </div>
+                                 <div class="col-right">
+                                    <p class="price">kr <span id="price">${p.price}</span> </p>
+                                 </div>
+                               </div>`
+    
+                productsList.insertAdjacentHTML("beforeend", pHTML)
+                totalPrice.innerText = +totalPrice.innerText + p.price
+    
+            });
+        }
 
         showEmptyBlock(e)
-        addListener()
     })
 }
 
 
 
-
-
-function addListener() {
-
-    const productsLinks = document.querySelectorAll(".product")
-    const productsLinksArray = Array.from(productsLinks)
-    let currProduct = {}
-
-    productsLinksArray.map(p => {
-        p.addEventListener("click", function (e) {
-
-            products.map(prod => {
-               if( p.dataset.id == prod.id) {
-                    currProduct = prod
+if(window.location.pathname.includes("cart.html")) {
+    window.addEventListener("load", function (e) {
+        const productsHTML = document.querySelectorAll(".product")
+        const productsHTMLArray = Array.from(productsHTML)
+        productsHTMLArray.forEach(p => {
+            p.addEventListener("click", function (e) {
+                let currProduct
+    
+                products.map(product => {
+                    if (product.id == p.dataset.id) {
+                        currProduct = product
+                    }
+                })
+    
+                if(!e.target.closest("#delete")) {
+                    window.location.pathname = './sneakerinfo.html'
                 }
+    
+                if (localStorage.getItem("sbeakerPageInfo")) {
+                    return
+                } else {
+                    localStorage.setItem("sneakerPageInfo", {})
+                }
+    
+                localStorage.setItem("sneakerPageInfo", JSON.stringify(currProduct))
+    
             })
-
-            localStorage.setItem("sneakerPageInfo", JSON.stringify(currProduct))
-            
         })
     })
 }
+
+
+
 
 
 
